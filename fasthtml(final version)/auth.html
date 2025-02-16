@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Python: module auth1</title>
+</head><body>
+
+<table class="heading">
+<tr class="heading-text decor">
+<td class="title">&nbsp;<br><strong class="title">auth1</strong></td>
+<td class="extra"><a href=".">index</a><br><a href="file:/Users/mac/Desktop/fasthtml/auth1.py">/Users/mac/Desktop/fasthtml/auth1.py</a></td></tr></table>
+    <p><span class="code">Authentication&nbsp;utilities&nbsp;for&nbsp;managing&nbsp;user&nbsp;data.<br>
+&nbsp;<br>
+This&nbsp;module&nbsp;provides&nbsp;functions&nbsp;for&nbsp;loading&nbsp;and&nbsp;saving&nbsp;user&nbsp;data&nbsp;from&nbsp;a&nbsp;JSON&nbsp;file,<br>
+as&nbsp;well&nbsp;as&nbsp;securely&nbsp;hashing&nbsp;passwords&nbsp;for&nbsp;storage.<br>
+&nbsp;<br>
+Attributes:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;USERS_FILE&nbsp;(Path):&nbsp;The&nbsp;file&nbsp;system&nbsp;path&nbsp;to&nbsp;the&nbsp;users.json&nbsp;data&nbsp;file.<br>
+&nbsp;<br>
+Methods:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#-load_users">load_users</a>():&nbsp;Loads&nbsp;user&nbsp;data&nbsp;from&nbsp;the&nbsp;users.json&nbsp;file.<br>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#-save_users">save_users</a>(users):&nbsp;Saves&nbsp;user&nbsp;data&nbsp;to&nbsp;the&nbsp;users.json&nbsp;file.<br>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#-hash_password">hash_password</a>(password):&nbsp;Hashes&nbsp;a&nbsp;password&nbsp;for&nbsp;secure&nbsp;storage.</span></p>
+<p>
+<table class="section">
+<tr class="decor pkg-content-decor heading-text">
+<td class="section-title" colspan=3>&nbsp;<br><strong class="bigsection">Modules</strong></td></tr>
+    
+<tr><td class="decor pkg-content-decor"><span class="code">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></td><td>&nbsp;</td>
+<td class="singlecolumn"><table><tr><td class="multicolumn"><a href="hashlib.html">hashlib</a><br>
+</td><td class="multicolumn"><a href="json.html">json</a><br>
+</td><td class="multicolumn"></td><td class="multicolumn"></td></tr></table></td></tr></table><p>
+<table class="section">
+<tr class="decor functions-decor heading-text">
+<td class="section-title" colspan=3>&nbsp;<br><strong class="bigsection">Functions</strong></td></tr>
+    
+<tr><td class="decor functions-decor"><span class="code">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></td><td>&nbsp;</td>
+<td class="singlecolumn"><dl><dt><a name="-compare_digest"><strong>compare_digest</strong></a>(a, b, /)</dt><dd><span class="code">Return&nbsp;'a&nbsp;==&nbsp;b'.<br>
+&nbsp;<br>
+This&nbsp;function&nbsp;uses&nbsp;an&nbsp;approach&nbsp;designed&nbsp;to&nbsp;prevent<br>
+timing&nbsp;analysis,&nbsp;making&nbsp;it&nbsp;appropriate&nbsp;for&nbsp;cryptography.<br>
+&nbsp;<br>
+a&nbsp;and&nbsp;b&nbsp;must&nbsp;both&nbsp;be&nbsp;of&nbsp;the&nbsp;same&nbsp;type:&nbsp;either&nbsp;str&nbsp;(ASCII&nbsp;only),<br>
+or&nbsp;any&nbsp;bytes-like&nbsp;object.<br>
+&nbsp;<br>
+Note:&nbsp;If&nbsp;a&nbsp;and&nbsp;b&nbsp;are&nbsp;of&nbsp;different&nbsp;lengths,&nbsp;or&nbsp;if&nbsp;an&nbsp;error&nbsp;occurs,<br>
+a&nbsp;timing&nbsp;attack&nbsp;could&nbsp;theoretically&nbsp;reveal&nbsp;information&nbsp;about&nbsp;the<br>
+types&nbsp;and&nbsp;lengths&nbsp;of&nbsp;a&nbsp;and&nbsp;b--but&nbsp;not&nbsp;their&nbsp;values.</span></dd></dl>
+ <dl><dt><a name="-hash_password"><strong>hash_password</strong></a>(password)</dt><dd><span class="code">Hashes&nbsp;a&nbsp;password&nbsp;for&nbsp;secure&nbsp;storage&nbsp;using&nbsp;SHA-256.<br>
+&nbsp;<br>
+Args:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;password&nbsp;(str):&nbsp;The&nbsp;password&nbsp;to&nbsp;hash.<br>
+&nbsp;<br>
+Returns:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;str:&nbsp;The&nbsp;hashed&nbsp;password&nbsp;as&nbsp;a&nbsp;hexadecimal&nbsp;string.</span></dd></dl>
+ <dl><dt><a name="-load_users"><strong>load_users</strong></a>()</dt><dd><span class="code">Loads&nbsp;user&nbsp;data&nbsp;from&nbsp;the&nbsp;users.json&nbsp;file.<br>
+&nbsp;<br>
+Returns:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;dict:&nbsp;A&nbsp;dictionary&nbsp;containing&nbsp;the&nbsp;user&nbsp;data.</span></dd></dl>
+ <dl><dt><a name="-save_users"><strong>save_users</strong></a>(users)</dt><dd><span class="code">Saves&nbsp;user&nbsp;data&nbsp;to&nbsp;the&nbsp;users.json&nbsp;file.<br>
+&nbsp;<br>
+Args:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;users&nbsp;(dict):&nbsp;A&nbsp;dictionary&nbsp;containing&nbsp;the&nbsp;user&nbsp;data&nbsp;to&nbsp;save.</span></dd></dl>
+</td></tr></table><p>
+<table class="section">
+<tr class="decor data-decor heading-text">
+<td class="section-title" colspan=3>&nbsp;<br><strong class="bigsection">Data</strong></td></tr>
+    
+<tr><td class="decor data-decor"><span class="code">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></td><td>&nbsp;</td>
+<td class="singlecolumn"><strong>USERS_FILE</strong> = PosixPath('users.json')</td></tr></table>
+</body></html>

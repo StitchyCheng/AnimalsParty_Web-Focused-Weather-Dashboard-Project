@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Python: module weather_data_processor</title>
+</head><body>
+
+<table class="heading">
+<tr class="heading-text decor">
+<td class="title">&nbsp;<br><strong class="title">weather_data_processor</strong></td>
+<td class="extra"><a href=".">index</a><br><a href="file:/Users/mac/Desktop/fasthtml/weather_data_processor.py">/Users/mac/Desktop/fasthtml/weather_data_processor.py</a></td></tr></table>
+    <p><span class="code">weather_data_processor.py<br>
+&nbsp;<br>
+This&nbsp;module&nbsp;provides&nbsp;a&nbsp;utility&nbsp;class,&nbsp;<a href="#WeatherDataProcessor">WeatherDataProcessor</a>,&nbsp;for&nbsp;processing&nbsp;and&nbsp;analyzing&nbsp;weather&nbsp;data.<br>
+It&nbsp;includes&nbsp;methods&nbsp;for&nbsp;obtaining&nbsp;AQI&nbsp;descriptions,&nbsp;preparing&nbsp;chart&nbsp;data,&nbsp;and&nbsp;analyzing&nbsp;weather&nbsp;trends.<br>
+&nbsp;<br>
+Classes:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#WeatherDataProcessor">WeatherDataProcessor</a>:&nbsp;A&nbsp;utility&nbsp;class&nbsp;for&nbsp;processing&nbsp;weather&nbsp;data.<br>
+&nbsp;<br>
+Methods:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;get_aqi_description(aqi):&nbsp;Obtain&nbsp;an&nbsp;air&nbsp;quality&nbsp;description&nbsp;based&nbsp;on&nbsp;AQI&nbsp;value.<br>
+&nbsp;&nbsp;&nbsp;&nbsp;prepare_chart_data(forecast_data):&nbsp;Prepare&nbsp;data&nbsp;for&nbsp;short-term&nbsp;(24&nbsp;hours)&nbsp;and&nbsp;long-term&nbsp;(5&nbsp;days)&nbsp;weather&nbsp;charts.<br>
+&nbsp;&nbsp;&nbsp;&nbsp;analyze_weather_trends(forecast_data):&nbsp;Analyze&nbsp;weather&nbsp;trends&nbsp;and&nbsp;provide&nbsp;insights,&nbsp;alerts,&nbsp;and&nbsp;suggestions.</span></p>
+<p>
+<table class="section">
+<tr class="decor pkg-content-decor heading-text">
+<td class="section-title" colspan=3>&nbsp;<br><strong class="bigsection">Modules</strong></td></tr>
+    
+<tr><td class="decor pkg-content-decor"><span class="code">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></td><td>&nbsp;</td>
+<td class="singlecolumn"><table><tr><td class="multicolumn"><a href="datetime.html">datetime</a><br>
+</td><td class="multicolumn"></td><td class="multicolumn"></td><td class="multicolumn"></td></tr></table></td></tr></table><p>
+<table class="section">
+<tr class="decor index-decor heading-text">
+<td class="section-title" colspan=3>&nbsp;<br><strong class="bigsection">Classes</strong></td></tr>
+    
+<tr><td class="decor index-decor"><span class="code">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></td><td>&nbsp;</td>
+<td class="singlecolumn"><dl>
+<dt class="heading-text"><a href="builtins.html#object">builtins.object</a>
+</dt><dd>
+<dl>
+<dt class="heading-text"><a href="weather_data_processor.html#WeatherDataProcessor">WeatherDataProcessor</a>
+</dt></dl>
+</dd>
+</dl>
+ <p>
+<table class="section">
+<tr class="decor title-decor heading-text">
+<td class="section-title" colspan=3>&nbsp;<br><a name="WeatherDataProcessor">class <strong>WeatherDataProcessor</strong></a>(<a href="builtins.html#object">builtins.object</a>)</td></tr>
+    
+<tr><td class="decor title-decor" rowspan=2><span class="code">&nbsp;&nbsp;&nbsp;</span></td>
+<td class="decor title-decor" colspan=2><span class="code">A&nbsp;utility&nbsp;class&nbsp;for&nbsp;processing&nbsp;and&nbsp;analyzing&nbsp;weather&nbsp;data.<br>
+&nbsp;<br>
+This&nbsp;class&nbsp;provides&nbsp;methods&nbsp;for&nbsp;obtaining&nbsp;AQI&nbsp;descriptions,&nbsp;preparing&nbsp;chart&nbsp;data,&nbsp;and&nbsp;analyzing&nbsp;weather&nbsp;trends.<br>
+It&nbsp;is&nbsp;designed&nbsp;to&nbsp;work&nbsp;with&nbsp;weather&nbsp;data&nbsp;from&nbsp;APIs&nbsp;like&nbsp;OpenWeatherMap.<br>&nbsp;</span></td></tr>
+<tr><td>&nbsp;</td>
+<td class="singlecolumn">Static methods defined here:<br>
+<dl><dt><a name="WeatherDataProcessor-analyze_weather_trends"><strong>analyze_weather_trends</strong></a>(forecast_data)</dt><dd><span class="code">Analyze&nbsp;weather&nbsp;trends&nbsp;and&nbsp;provide&nbsp;insights,&nbsp;alerts,&nbsp;and&nbsp;suggestions.<br>
+&nbsp;<br>
+Args:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;forecast_data&nbsp;(dict):&nbsp;A&nbsp;dictionary&nbsp;containing&nbsp;forecast&nbsp;data.<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Expected&nbsp;keys:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-&nbsp;'list':&nbsp;List&nbsp;of&nbsp;forecast&nbsp;items&nbsp;with&nbsp;keys&nbsp;'dt',&nbsp;'main',&nbsp;'weather',&nbsp;'wind',&nbsp;and&nbsp;'pop'.<br>
+&nbsp;<br>
+Returns:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;dict:&nbsp;A&nbsp;dictionary&nbsp;containing&nbsp;the&nbsp;analysis&nbsp;results,&nbsp;including:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-&nbsp;'temperature_trend':&nbsp;Temperature&nbsp;trend&nbsp;information.<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-&nbsp;'comfort_analysis':&nbsp;Comfort&nbsp;level&nbsp;analysis&nbsp;for&nbsp;each&nbsp;time&nbsp;point.<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-&nbsp;'weather_alerts':&nbsp;Weather&nbsp;alerts&nbsp;(e.g.,&nbsp;high&nbsp;temperature,&nbsp;strong&nbsp;wind).<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-&nbsp;'outdoor_suggestions':&nbsp;Suggestions&nbsp;for&nbsp;outdoor&nbsp;activities.<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-&nbsp;'trend_description':&nbsp;A&nbsp;summary&nbsp;description&nbsp;of&nbsp;the&nbsp;weather&nbsp;trends.</span></dd></dl>
+
+<dl><dt><a name="WeatherDataProcessor-get_aqi_description"><strong>get_aqi_description</strong></a>(aqi)</dt><dd><span class="code">Obtain&nbsp;an&nbsp;air&nbsp;quality&nbsp;description&nbsp;based&nbsp;on&nbsp;the&nbsp;AQI&nbsp;value.<br>
+&nbsp;<br>
+Args:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;aqi&nbsp;(int):&nbsp;The&nbsp;Air&nbsp;Quality&nbsp;Index&nbsp;value.<br>
+&nbsp;<br>
+Returns:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;tuple:&nbsp;A&nbsp;tuple&nbsp;containing&nbsp;the&nbsp;air&nbsp;quality&nbsp;description&nbsp;and&nbsp;a&nbsp;corresponding&nbsp;color&nbsp;code.<br>
+&nbsp;<br>
+Example:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&gt;&gt;&gt;&nbsp;description,&nbsp;color&nbsp;=&nbsp;<a href="#WeatherDataProcessor">WeatherDataProcessor</a>.<a href="#WeatherDataProcessor-get_aqi_description">get_aqi_description</a>(75)<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&gt;&gt;&gt;&nbsp;print(description,&nbsp;color)<br>
+&nbsp;&nbsp;&nbsp;&nbsp;good&nbsp;#f0ad4e</span></dd></dl>
+
+<dl><dt><a name="WeatherDataProcessor-prepare_chart_data"><strong>prepare_chart_data</strong></a>(forecast_data)</dt><dd><span class="code">Prepare&nbsp;data&nbsp;for&nbsp;short-term&nbsp;(24&nbsp;hours)&nbsp;and&nbsp;long-term&nbsp;(5&nbsp;days)&nbsp;weather&nbsp;charts.<br>
+&nbsp;<br>
+Args:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;forecast_data&nbsp;(dict):&nbsp;A&nbsp;dictionary&nbsp;containing&nbsp;forecast&nbsp;data.<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Expected&nbsp;keys:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-&nbsp;'list':&nbsp;List&nbsp;of&nbsp;forecast&nbsp;items&nbsp;with&nbsp;keys&nbsp;'dt',&nbsp;'main',&nbsp;'weather',&nbsp;'wind',&nbsp;and&nbsp;'pop'.<br>
+&nbsp;<br>
+Returns:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;dict:&nbsp;A&nbsp;dictionary&nbsp;containing&nbsp;prepared&nbsp;data&nbsp;for&nbsp;short-term&nbsp;and&nbsp;long-term&nbsp;charts.<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Keys:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-&nbsp;'short_term':&nbsp;Data&nbsp;for&nbsp;the&nbsp;next&nbsp;24&nbsp;hours.<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-&nbsp;'long_term':&nbsp;Data&nbsp;for&nbsp;the&nbsp;next&nbsp;5&nbsp;days.<br>
+&nbsp;<br>
+Example:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&gt;&gt;&gt;&nbsp;chart_data&nbsp;=&nbsp;<a href="#WeatherDataProcessor">WeatherDataProcessor</a>.<a href="#WeatherDataProcessor-prepare_chart_data">prepare_chart_data</a>(forecast_data)<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&gt;&gt;&gt;&nbsp;print(chart_data)</span></dd></dl>
+
+<hr>
+Data descriptors defined here:<br>
+<dl><dt><strong>__dict__</strong></dt>
+<dd><span class="code">dictionary&nbsp;for&nbsp;instance&nbsp;variables</span></dd>
+</dl>
+<dl><dt><strong>__weakref__</strong></dt>
+<dd><span class="code">list&nbsp;of&nbsp;weak&nbsp;references&nbsp;to&nbsp;the&nbsp;object</span></dd>
+</dl>
+</td></tr></table></td></tr></table>
+</body></html>

@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Python: module weather_data_fetcher</title>
+</head><body>
+
+<table class="heading">
+<tr class="heading-text decor">
+<td class="title">&nbsp;<br><strong class="title">weather_data_fetcher</strong></td>
+<td class="extra"><a href=".">index</a><br><a href="file:/Users/mac/Desktop/fasthtml/weather_data_fetcher.py">/Users/mac/Desktop/fasthtml/weather_data_fetcher.py</a></td></tr></table>
+    <p><span class="code">Module:&nbsp;weather_data_fetcher.py<br>
+Description:&nbsp;A&nbsp;module&nbsp;for&nbsp;fetching&nbsp;weather&nbsp;data&nbsp;from&nbsp;the&nbsp;OpenWeatherMap&nbsp;API.<br>
+&nbsp;<br>
+This&nbsp;module&nbsp;provides&nbsp;a&nbsp;simple&nbsp;interface&nbsp;to&nbsp;retrieve&nbsp;current&nbsp;weather&nbsp;data,&nbsp;5-day&nbsp;forecasts,&nbsp;and&nbsp;air&nbsp;quality&nbsp;information<br>
+using&nbsp;the&nbsp;OpenWeatherMap&nbsp;API.&nbsp;It&nbsp;handles&nbsp;API&nbsp;requests&nbsp;and&nbsp;basic&nbsp;error&nbsp;handling,&nbsp;making&nbsp;it&nbsp;easy&nbsp;to&nbsp;integrate&nbsp;weather&nbsp;data&nbsp;into&nbsp;your&nbsp;application.<br>
+&nbsp;<br>
+Note:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;-&nbsp;You&nbsp;need&nbsp;a&nbsp;valid&nbsp;OpenWeatherMap&nbsp;API&nbsp;key&nbsp;to&nbsp;use&nbsp;this&nbsp;module.<br>
+&nbsp;&nbsp;&nbsp;&nbsp;-&nbsp;The&nbsp;API&nbsp;key&nbsp;should&nbsp;be&nbsp;kept&nbsp;secure&nbsp;to&nbsp;avoid&nbsp;unauthorized&nbsp;access.<br>
+&nbsp;&nbsp;&nbsp;&nbsp;-&nbsp;If&nbsp;you&nbsp;encounter&nbsp;issues&nbsp;with&nbsp;API&nbsp;requests,&nbsp;check&nbsp;the&nbsp;API&nbsp;key,&nbsp;city&nbsp;name,&nbsp;latitude,&nbsp;and&nbsp;longitude&nbsp;for&nbsp;accuracy.<br>
+&nbsp;&nbsp;&nbsp;&nbsp;-&nbsp;Network&nbsp;issues&nbsp;may&nbsp;affect&nbsp;API&nbsp;requests;&nbsp;ensure&nbsp;your&nbsp;network&nbsp;connection&nbsp;is&nbsp;stable.<br>
+&nbsp;&nbsp;&nbsp;&nbsp;-&nbsp;If&nbsp;the&nbsp;API&nbsp;requests&nbsp;fail,&nbsp;it&nbsp;might&nbsp;be&nbsp;due&nbsp;to&nbsp;network&nbsp;problems&nbsp;or&nbsp;invalid&nbsp;API&nbsp;links.&nbsp;Please&nbsp;check&nbsp;the&nbsp;links&nbsp;and&nbsp;try&nbsp;again&nbsp;later.<br>
+&nbsp;<br>
+See&nbsp;Also:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;weather_data_processor.py:&nbsp;A&nbsp;module&nbsp;for&nbsp;processing&nbsp;and&nbsp;analyzing&nbsp;weather&nbsp;data.</span></p>
+<p>
+<table class="section">
+<tr class="decor pkg-content-decor heading-text">
+<td class="section-title" colspan=3>&nbsp;<br><strong class="bigsection">Modules</strong></td></tr>
+    
+<tr><td class="decor pkg-content-decor"><span class="code">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></td><td>&nbsp;</td>
+<td class="singlecolumn"><table><tr><td class="multicolumn"><a href="requests.html">requests</a><br>
+</td><td class="multicolumn"></td><td class="multicolumn"></td><td class="multicolumn"></td></tr></table></td></tr></table><p>
+<table class="section">
+<tr class="decor index-decor heading-text">
+<td class="section-title" colspan=3>&nbsp;<br><strong class="bigsection">Classes</strong></td></tr>
+    
+<tr><td class="decor index-decor"><span class="code">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></td><td>&nbsp;</td>
+<td class="singlecolumn"><dl>
+<dt class="heading-text"><a href="builtins.html#object">builtins.object</a>
+</dt><dd>
+<dl>
+<dt class="heading-text"><a href="weather_data_fetcher.html#WeatherDataFetcher">WeatherDataFetcher</a>
+</dt></dl>
+</dd>
+</dl>
+ <p>
+<table class="section">
+<tr class="decor title-decor heading-text">
+<td class="section-title" colspan=3>&nbsp;<br><a name="WeatherDataFetcher">class <strong>WeatherDataFetcher</strong></a>(<a href="builtins.html#object">builtins.object</a>)</td></tr>
+    
+<tr><td class="decor title-decor" rowspan=2><span class="code">&nbsp;&nbsp;&nbsp;</span></td>
+<td class="decor title-decor" colspan=2><span class="code">A&nbsp;utility&nbsp;class&nbsp;for&nbsp;fetching&nbsp;weather&nbsp;data&nbsp;from&nbsp;the&nbsp;OpenWeatherMap&nbsp;API.<br>
+&nbsp;<br>
+This&nbsp;class&nbsp;provides&nbsp;static&nbsp;methods&nbsp;to&nbsp;retrieve&nbsp;current&nbsp;weather&nbsp;data,&nbsp;5-day&nbsp;forecasts,&nbsp;and&nbsp;air&nbsp;quality&nbsp;information.<br>
+It&nbsp;handles&nbsp;API&nbsp;requests&nbsp;and&nbsp;basic&nbsp;error&nbsp;handling.<br>
+&nbsp;<br>
+Attributes:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;API_KEY&nbsp;(str):&nbsp;The&nbsp;API&nbsp;key&nbsp;for&nbsp;accessing&nbsp;the&nbsp;OpenWeatherMap&nbsp;API.<br>&nbsp;</span></td></tr>
+<tr><td>&nbsp;</td>
+<td class="singlecolumn">Static methods defined here:<br>
+<dl><dt><a name="WeatherDataFetcher-get_air_quality"><strong>get_air_quality</strong></a>(lat, lon)</dt><dd><span class="code">Obtain&nbsp;air&nbsp;quality&nbsp;data&nbsp;for&nbsp;a&nbsp;given&nbsp;latitude&nbsp;and&nbsp;longitude.<br>
+&nbsp;<br>
+Args:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;lat&nbsp;(float):&nbsp;The&nbsp;latitude.<br>
+&nbsp;&nbsp;&nbsp;&nbsp;lon&nbsp;(float):&nbsp;The&nbsp;longitude.<br>
+&nbsp;<br>
+Returns:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;dict&nbsp;or&nbsp;None:&nbsp;A&nbsp;dictionary&nbsp;containing&nbsp;the&nbsp;air&nbsp;quality&nbsp;data,&nbsp;or&nbsp;None&nbsp;if&nbsp;the&nbsp;request&nbsp;fails.<br>
+&nbsp;<br>
+Raises:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;ValueError:&nbsp;If&nbsp;latitude&nbsp;or&nbsp;longitude&nbsp;is&nbsp;not&nbsp;provided.<br>
+&nbsp;&nbsp;&nbsp;&nbsp;requests.RequestException:&nbsp;If&nbsp;the&nbsp;API&nbsp;request&nbsp;fails.</span></dd></dl>
+
+<dl><dt><a name="WeatherDataFetcher-get_forecast"><strong>get_forecast</strong></a>(city)</dt><dd><span class="code">Obtain&nbsp;5-day&nbsp;forecast&nbsp;data&nbsp;for&nbsp;a&nbsp;given&nbsp;city.<br>
+&nbsp;<br>
+Args:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;city&nbsp;(str):&nbsp;The&nbsp;name&nbsp;of&nbsp;the&nbsp;city.<br>
+&nbsp;<br>
+Returns:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;dict&nbsp;or&nbsp;None:&nbsp;A&nbsp;dictionary&nbsp;containing&nbsp;the&nbsp;5-day&nbsp;forecast&nbsp;data,&nbsp;or&nbsp;None&nbsp;if&nbsp;the&nbsp;request&nbsp;fails.<br>
+&nbsp;<br>
+Raises:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;requests.RequestException:&nbsp;If&nbsp;the&nbsp;API&nbsp;request&nbsp;fails.</span></dd></dl>
+
+<dl><dt><a name="WeatherDataFetcher-get_weather"><strong>get_weather</strong></a>(city)</dt><dd><span class="code">Obtain&nbsp;current&nbsp;weather&nbsp;data&nbsp;for&nbsp;a&nbsp;given&nbsp;city.<br>
+&nbsp;<br>
+Args:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;city&nbsp;(str):&nbsp;The&nbsp;name&nbsp;of&nbsp;the&nbsp;city.<br>
+&nbsp;<br>
+Returns:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;dict&nbsp;or&nbsp;None:&nbsp;A&nbsp;dictionary&nbsp;containing&nbsp;the&nbsp;current&nbsp;weather&nbsp;data,&nbsp;or&nbsp;None&nbsp;if&nbsp;the&nbsp;request&nbsp;fails.<br>
+&nbsp;<br>
+Raises:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;requests.RequestException:&nbsp;If&nbsp;the&nbsp;API&nbsp;request&nbsp;fails.</span></dd></dl>
+
+<hr>
+Data descriptors defined here:<br>
+<dl><dt><strong>__dict__</strong></dt>
+<dd><span class="code">dictionary&nbsp;for&nbsp;instance&nbsp;variables</span></dd>
+</dl>
+<dl><dt><strong>__weakref__</strong></dt>
+<dd><span class="code">list&nbsp;of&nbsp;weak&nbsp;references&nbsp;to&nbsp;the&nbsp;object</span></dd>
+</dl>
+<hr>
+Data and other attributes defined here:<br>
+<dl><dt><strong>API_KEY</strong> = 'ffbd62ce8de707d8aef093dca5dce999'</dl>
+
+</td></tr></table></td></tr></table>
+</body></html>
