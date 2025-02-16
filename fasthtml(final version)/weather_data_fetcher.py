@@ -43,7 +43,7 @@ class WeatherDataFetcher:
         Raises:
             requests.RequestException: If the API request fails.
         """
-        url = f"http://api.openweathermap.org/data/2.5/weather?q={city}&appid={WeatherDataFetcher.API_KEY}&units=metric&lang=zh_cn"
+        url = f"http://api.openweathermap.org/data/2.5/weather?q={city}&appid={WeatherDataFetcher.API_KEY}&units=metric&lang=en"
         response = requests.get(url)
         if response.status_code == 200:
             return response.json()
@@ -63,7 +63,7 @@ class WeatherDataFetcher:
         Raises:
             requests.RequestException: If the API request fails.
         """
-        url = f"http://api.openweathermap.org/data/2.5/forecast?q={city}&appid={WeatherDataFetcher.API_KEY}&units=metric&lang=zh_cn"
+        url = f"http://api.openweathermap.org/data/2.5/forecast?q={city}&appid={WeatherDataFetcher.API_KEY}&units=metric&lang=en"
         response = requests.get(url)
         if response.status_code == 200:
             return response.json()
